@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Fri Feb 23 14:12:58 BRT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.2 - (1181258): instance a816c00e-0161-c3a7-526a-00000072a478 
+on database directory C:\000000\JM\Assistente de Ressuprimento\Nova pasta\Assistente_de_Ressuprimento\JMarySystems\db_fonema_e_letra  with class loader sun.misc.Launcher$AppClassLoader@d93b30 
+Loaded from file:/C:/000000/JM/Assistente%20de%20Ressuprimento/Nova%20pasta/Assistente_de_Ressuprimento/dist/run1340663909/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=C:\000000\JM\Assistente de Ressuprimento\Nova pasta\Assistente_de_Ressuprimento
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

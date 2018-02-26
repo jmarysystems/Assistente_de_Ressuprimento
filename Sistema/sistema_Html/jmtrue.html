@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+<script type="text/javascript" src='https://sites.google.com/site/jmarysystemsjquery/jquery.js'></script>
+<script type="text/javascript" src='https://sites.google.com/site/jmarysystemsjquery/jmary_menu_jquery.js'></script>
+<script type="text/javascript" src='https://sites.google.com/site/jmarysystemsjquery/mostrarTd_Js.js'></script>
+
+<link rel="stylesheet" href="https://sites.google.com/site/saojoaomadeirasmenudrop/jmarymenudrop.css"/>
+<link rel="stylesheet" href="https://sites.google.com/site/jmarysystemscss/jmary_menu.css"/>
+<link rel="stylesheet" href="https://sites.google.com/site/gbarbosacss/jmary_topo.css"/>
+<link rel="stylesheet" href="https://sites.google.com/site/jmarysystemscss/estrutura.css"/>
+<!--     
+<script src='https://sites.google.com/site/jmarysystemsjquery/jquery.js' type='text/javascript'/>
+
+<script src='https://sites.google.com/site/jmarysystemsjquery/jmary_menu_jquery.js' type='text/javascript'/>
+
+<script src='https://sites.google.com/site/jmarysystemsjquery/mostrarTd_Js.js' type='text/javascript'/>
+
+<link href='https://sites.google.com/site/saojoaomadeirasmenudrop/jmarymenudrop.css' media='screen,projection' rel='stylesheet' type='text/css'/>
+
+<link href='https://sites.google.com/site/jmarysystemscss/jmary_menu.css' media='screen,projection' rel='stylesheet' type='text/css'/>
+
+<link href='https://sites.google.com/site/gbarbosacss/jmary_topo.css' media='screen,projection' rel='stylesheet' type='text/css'/>
+
+<link href='https://sites.google.com/site/jmarysystemscss/estrutura.css' media='screen,projection' rel='stylesheet' type='text/css'/>        
+-->        
+
+
+
+
+
+<style>
+            .mostrar { display: block; }
+            .linha { background-color:#F0F0F0; }
+            .linha:hover { background-color:#fff; }
+            .sombra { box-shadow: 0px 0px 10px #222; }
+            
+            .bodypadrao   {width: 100%; height: 100%; font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding: 0px; margin: 0px 0px 0px 0px; color: black; line-height: 1.5; }
+            .divpartesuperior{ background-color: #3A3A3A; overflow: visible; width: 300px; height: 50px; padding: 0; margin: 0; z-index: 2000; line-height: 50px;}       
+            .ulpartesuperior{list-style:none; padding: 0px; margin: 0px; height: 100%;  }       
+            .lipartesuperior{height: 50px; float: left; position: relative; }
+            .li_imagem_menu{
+                background-image: url("img/menu_bt_1.png");
+                background-repeat: no-repeat;
+                height: 30px; width: 30px; margin-top: 10px; cursor: pointer;  margin-left: 10px; }
+            .li_imagem_menu:hover{
+                background-image: url("img/menu_bt_2.png");
+                background-repeat: no-repeat;
+                height: 30px; width: 30px; margin-top: 10px; cursor: pointer;  margin-left: 10px; }
+            
+            .ulcontrolefull{background-color: #F0F0F0; list-style:none; line-height: 25px; padding-left: 0px; padding-right: 5px; padding-bottom: 10px; padding-top: 0px; margin-left: 0px; margin-right: 0px; margin-bottom: 0px; margin-top: 10px; }
+            .ulsimples{list-style:none; padding: 0px; margin: 0px;} 
+            .materiaprimeirobloco{list-style:none; padding: 0px; margin: 0px;} 
+            .materiasegundobloco{list-style:none; padding-left: 30px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;} 
+            .materiasegundobloco2{list-style:none; padding-left: 60px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .materiasegundobloco3{list-style:none; padding-left: 90px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_1{padding-left: 35px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_1:hover{padding-left: 35px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px; border-right-style: solid; border-right-color: #C10033;}
+            .categoriaprimeirobloco_2{padding-left: 60px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_2:hover{padding-left: 60px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px; border-right-style: solid; border-right-color: #C10033;}   
+            .categoriaprimeirobloco_3{padding-left: 90px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_3:hover{padding-left: 90px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px; border-right-style: solid; border-right-color: #C10033;} 
+            .categoriaprimeirobloco_4{padding-left: 123px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px;}
+            .categoriaprimeirobloco_4:hover{padding-left: 123px; padding-right: 0; padding-bottom: 0; padding-top: 0px; margin: 0px; border-right-style: solid; border-right-color: #C10033;} 
+            
+            .alinha{ padding-left: 1px; color:#0000FF; text-decoration:none; }
+        </style> 
+
+    </head>
+    <body style="width: 100%; height: 100%; 
+          
+                 font-family: Arial, Helvetica, sans-serif; font-size: 14px; 
+                 padding: 0px; margin: 0px 0px 0px 0px;    
+                 color: black; line-height: 1.5;">  
+        
+        <script type="text/javascript" src='https://sites.google.com/site/saojoaomadeirasmenudrop/jmarymenudrop.js'></script>
+        <!-- <script src='https://sites.google.com/site/saojoaomadeirasmenudrop/jmarymenudrop.js' type='text/javascript'/> -->   
+        
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->            
+<!-- 
+-0
+-1
+-2
+- #### MENU INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->    
+<div style="background-color: #3A3A3A; 
+            width:            100%; 
+            height:           50px; 
+            padding:          0; 
+            margin:           0;              
+            z-index:          2000;
+            " >
+    
+<ul style="list-style:none; padding: 0px; margin: 0px; height: 100%; ">
+    
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 1 INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2 ///////////////////////////////////menu//////////////////////////////////////////////////       
+--> 
+    <li style="float: left; position: relative; width: 30px; overflow: visible; padding-left: 10px; padding-right: 10px; cursor: pointer;"  >
+        
+        <img 
+            id="menuimg" 
+            style="height: 30px; width: 30px; padding-top: 10px;"
+            src="https://sites.google.com/site/jmarysystemsimagens/mobile_menu_btn.png" 
+            onmouseover="this.src='https://sites.google.com/site/saojoaomadeirasimagens/mobile_menu_btn2.png'" 
+            onmouseout="this.src='https://sites.google.com/site/jmarysystemsimagens/mobile_menu_btn.png'">
+
+<!-- 
+-0
+-1
+-2
+- ####///////////////////////////////////menu//////////////////////////////////////////////////   --> 
+<!-- 
+-0
+-1
+-2    
+-->        
+<div id="menuxx" class="divpartesuperior dispnone">
+            <ul class="ulpartesuperior">
+                <li id="menuseta2" class="lipartesuperior">    
+    <ul id="menudetabs" class="ulcontrolefull sombra">
+                        <li>
+                            
+                            <ul class="ulsimples">
+                                <li>
+                                     <ul class="materiaprimeirobloco"> 
+                                         <li class="linha">                                            
+                                            <table><tr>
+                                                <td><img id="img1" class="img_list" src="" title="Mostrar/Ocultar"                              
+                                                    style="vertical-align: middle; height:27px; width:27px;"
+                                                    onclick=    "indiceclickmostrarocultar_tr('jm2');
+                                                        indiceclickalterarimagem      ( this, this.src);" 
+                                                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                </td>
+                                                <td>Análise e Desenvolvimento de Sistemas</td></tr></table>                                          
+                                         </li> 
+                                                                                  
+                                     </ul> 
+                                </li>  
+                                <li id="jm2">
+                                    <ul class="ulsimples"> 
+                                        
+                                        <li class="categoriaprimeirobloco_1 linha">
+                                            <a class="alinha" target="centro" 
+                                                href="matematica/exercícios/tabuada/número 2/Número 2 Tabuada.html" >                                                       
+                                                Introdução                                              
+                                            </a>
+                                        </li> 
+                                        
+                                        <li class="materiasegundobloco linha">                                            
+                                            <table><tr>
+                                                <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                    style="vertical-align: middle; height:27px; width:27px;"
+                                                    onclick=    "indiceclickmostrarocultar_tr('jm1');
+                                                        indiceclickalterarimagem      ( this, this.src);" 
+                                                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                </td>
+                                                <td>Algorítimos</td></tr></table>                                          
+                                        </li> 
+                                        
+                                        <li id="jm1" class=" dispnone">
+                                            <ul class="ulsimples"> 
+                                                <li class="linha categoriaprimeirobloco_2">
+                                                    <a class="alinha" target="centro" 
+                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                    Vídeo Aula 1                                              
+                                                    </a>
+                                                </li>  
+                                                <li class="linha categoriaprimeirobloco_2">
+                                                    <a class="alinha" target="centro" 
+                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/002 - ALGORÍTIMOS.html" >                                                       
+                                                    Vídeo Aula 2                                             
+                                                    </a>
+                                                </li>
+                                                <li class="linha categoriaprimeirobloco_2">
+                                                    <a class="alinha" target="centro" 
+                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/003 - ALGORÍTIMOS.html" >                                                       
+                                                    Vídeo Aula 3                                             
+                                                    </a>
+                                                </li>
+                                                <li class="linha categoriaprimeirobloco_2">
+                                                    <a class="alinha" target="centro" 
+                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/004 - ALGORÍTIMOS.html" >                                                       
+                                                    Vídeo Aula 4                                             
+                                                    </a>
+                                                </li>
+                                            </ul> 
+                                        </li>  
+                                        
+                                        <li class="materiasegundobloco linha">                                            
+                                            <table><tr>
+                                                <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                    style="vertical-align: middle; height:27px; width:27px;"
+                                                    onclick=    "indiceclickmostrarocultar_tr('jm3');
+                                                        indiceclickalterarimagem      ( this, this.src);" 
+                                                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                </td>
+                                                <td>Organização de Computadores</td></tr></table>                                          
+                                        </li> 
+                                        
+                                        <li id="jm3" class="categoriaprimeirobloco_2 linha dispnone">
+                                            <a class="alinha" target="centro" 
+                                                href="matematica/exercícios/tabuada/número 2/Número 2 Tabuada.html" >                                                       
+                                                Introdução                                              
+                                            </a>
+                                        </li> 
+                                        
+                                        <li class="materiasegundobloco linha">                                            
+                                            <table><tr>
+                                                <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                    style="vertical-align: middle; height:27px; width:27px;"
+                                                    onclick=    "indiceclickmostrarocultar_tr('jm4');
+                                                        indiceclickalterarimagem      ( this, this.src);" 
+                                                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                </td>
+                                                <td>Tecnologias Web</td></tr></table>                                          
+                                        </li> 
+                                        
+                                        <li id="jm4" class="categoriaprimeirobloco_2 linha dispnone">
+                                            <a class="alinha" target="centro" 
+                                                href="matematica/exercícios/tabuada/número 2/Número 2 Tabuada.html" >                                                       
+                                                Introdução                                              
+                                            </a>
+                                        </li> 
+                                        
+                                        <li class="materiasegundobloco linha">                                            
+                                            <table><tr>
+                                                <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                    style="vertical-align: middle; height:27px; width:27px;"
+                                                    onclick=    "indiceclickmostrarocultar_tr('jm5');
+                                                        indiceclickalterarimagem      ( this, this.src);" 
+                                                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                </td>
+                                                <td>Português</td></tr></table>                                          
+                                        </li> 
+                                        
+                                        <li id="jm5" class="categoriaprimeirobloco_2 linha dispnone">
+                                            <a class="alinha" target="centro" 
+                                                href="matematica/exercícios/tabuada/número 2/Número 2 Tabuada.html" >                                                       
+                                                Introdução                                              
+                                            </a>
+                                        </li> 
+                                        
+                                        <li class="materiasegundobloco linha">                                            
+                                            <table><tr>
+                                                <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                    style="vertical-align: middle; height:27px; width:27px;"
+                                                    onclick=    "indiceclickmostrarocultar_tr('jm6');
+                                                        indiceclickalterarimagem      ( this, this.src);" 
+                                                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                </td>
+                                                <td>Planejameno de Carreira e Sucesso</td></tr></table>                                          
+                                        </li> 
+                                        
+                                        <li id="jm6" class="categoriaprimeirobloco_2 linha dispnone">
+                                            <a class="alinha" target="centro" 
+                                                href="matematica/exercícios/tabuada/número 2/Número 2 Tabuada.html" >                                                       
+                                                Introdução                                              
+                                            </a>
+                                        </li> 
+                                        
+<!-- INÍCIO SEGUNDO SEMESTRE --------- -------------------------------------- -->                                         
+                                        <li class="materiasegundobloco linha">                                            
+                                            <table><tr>
+                                                <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                    style="vertical-align: middle; height:27px; width:27px;"
+                                                    onclick=    "indiceclickmostrarocultar_tr('jm30');
+                                                        indiceclickalterarimagem      ( this, this.src);" 
+                                                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                </td>
+                                                <td>Segundo Semestre</td></tr></table>                                          
+                                        </li> 
+                                        
+                                        <li id="jm30" class="dispnone">
+                                            <ul class="ulsimples"> 
+                                                                                               
+                                                <li class="categoriaprimeirobloco_2 linha">
+                                                    <a class="alinha" target="centro" 
+                                                        href="matematica/exercícios/tabuada/número 2/Número 2 Tabuada.html" >                                                       
+                                                        Introdução                                              
+                                                    </a>
+                                                </li>
+                                                
+            <!-- INÍCIO MATERÍA 1 MODELO-----                    ----------- -->                                       
+                                                <li class="materiasegundobloco2 linha">                                            
+                                                    <table><tr>
+                                                    <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                        style="vertical-align: middle; height:27px; width:27px;"
+                                                        onclick=    "indiceclickmostrarocultar_tr('jm31');
+                                                            indiceclickalterarimagem      ( this, this.src);" 
+                                                            onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                            onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                    </td>
+                                                    <td>Redes de Computadores</td></tr></table>                                          
+                                                </li>
+                                                
+                                                <li id="jm31" class=" dispnone">
+                                                    
+                                                    <ul class="ulsimples"> 
+                                                        
+                                                        <li class="linha categoriaprimeirobloco_3">
+                                                            <a class="alinha" target="centro" 
+                                                            href="02 - SEMESTRE/REDES DE COMPUTADORES/CONTEÚDO ONLINE/001 - REDES DE COMPUTADORES/Plano de Ensino.html" >                                                    
+                                                            Plano de Ensino                                              
+                                                            </a>
+                                                        </li> 
+                                                        
+                                                        <li class="linha categoriaprimeirobloco_3"> 
+                                                            <a class="alinha" target="centro" 
+                                                            href="02 - SEMESTRE/REDES DE COMPUTADORES/CONTEÚDO ONLINE/001 - REDES DE COMPUTADORES/mapa_conceitual.html" >                                                    
+                                                            Mapa Conceitual                                             
+                                                            </a>
+                                                        </li> 
+                                                        
+                                                        <li class="linha categoriaprimeirobloco_3"> 
+                                                            <a class="alinha" target="centro" 
+                                                            href="02 - SEMESTRE/REDES DE COMPUTADORES/CONTEÚDO ONLINE/001 - REDES DE COMPUTADORES/AE_REDES DE COMPUTADORES 1de2.html" >                                                    
+                                                            Atividade Estruturada 1 de 2                                           
+                                                            </a>
+                                                        </li> 
+                                                        
+                                                        <li class="linha categoriaprimeirobloco_3"> 
+                                                            <a class="alinha" target="centro" 
+                                                            href="02 - SEMESTRE/REDES DE COMPUTADORES/CONTEÚDO ONLINE/001 - REDES DE COMPUTADORES/AE_REDES DE COMPUTADORES 2de2.html" >                                                    
+                                                            Atividade Estruturada 2 de 2                                           
+                                                            </a>
+                                                        </li> 
+                                                        
+                                                        <li class="linha categoriaprimeirobloco_3">
+                                                            <a class="alinha" target="centro" 
+                                                            href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                            Introdução                                              
+                                                            </a>
+                                                        </li> 
+                                                        
+                                    <!-- INÍCIO CATEGORIA 1 MATÉRIA 1 MODELO---------- -->                            
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm32');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Vídeo Aulas</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm32" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4"> 
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/VÍDEO AULAS/001 - REDES DE COMPUTADORES.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4"> 
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/VÍDEO AULAS/002 - REDES DE COMPUTADORES.html" >                                                       
+                                                                    Vídeo Aula 2                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4"> 
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/VÍDEO AULAS/003 - REDES DE COMPUTADORES.html" >                                                       
+                                                                    Vídeo Aula 3                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4"> 
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/VÍDEO AULAS/004 - REDES DE COMPUTADORES.html" >                                                       
+                                                                    Vídeo Aula 4                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4"> 
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/VÍDEO AULAS/005 - REDES DE COMPUTADORES.html" >                                                       
+                                                                    Vídeo Aula 5                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 1 MATÉRIA 1 MODELO--   -------- -->                     
+                                          
+                                    <!-- INÍCIO CATEGORIA 2 MATÉRIA 1 MODELO---------- -->
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm33');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Conteúdo Online</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm33" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/CONTEÚDO ONLINE/001 - REDES DE COMPUTADORES/001 - REDES DE COMPUTADORES.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/CONTEÚDO ONLINE/002 - REDES DE COMPUTADORES/002 - REDES DE COMPUTADORES.html" >                                                       
+                                                                    Vídeo Aula 2                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/CONTEÚDO ONLINE/003 - REDES DE COMPUTADORES/003 - REDES DE COMPUTADORES.html" >                                                       
+                                                                    Vídeo Aula 3                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 2 MATÉRIA 1 MODELO--   -------- -->                     
+                                                        
+                                    <!-- INÍCIO CATEGORIA 3 MATÉRIA 1 MODELO---------- -->
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm34');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Exercícios e Simulaos</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm34" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/EXERCÍCIOS E SIMULADOS/001 - REDES DE COMPUTADORES/JM - Aula1 - Exercícios/JM - Aula1 - Exercícios.html" >                                                       
+                                                                    Aula 1 - Exercícios                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE/REDES DE COMPUTADORES/EXERCÍCIOS E SIMULADOS/002 - REDES DE COMPUTADORES/JM - Aula2 - Exercícios/JM - Aula2 - Exercícios.html" >                                                       
+                                                                    Aula 2 - Exercícios                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 3 MATÉRIA 1 MODELO--   -------- -->                        
+                                                        
+                                    <!-- INÍCIO CATEGORIA 4 MATÉRIA 1 MODELO---------- -->
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm35');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Livros Modelo</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm35" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 4 MATÉRIA 1 MODELO--   -------- -->                           
+                                                        
+                                                    </ul> 
+                                                </li>
+            <!-- FIM MATERÍA 1 MODELO   -------                     -------- -->    
+            
+            <!-- INÍCIO MATERÍA MATEMATICA DISCRETA   ------                 ---------- -->                                       
+                                                <li class="materiasegundobloco2 linha">                                            
+                                                    <table><tr>
+                                                    <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                        style="vertical-align: middle; height:27px; width:27px;"
+                                                        onclick=    "indiceclickmostrarocultar_tr('jmmatd36');
+                                                            indiceclickalterarimagem      ( this, this.src);" 
+                                                            onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                            onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                    </td>
+                                                    <td>Matemática Discreta</td></tr></table>                                          
+                                                </li>
+                                                
+                                                <li id="jmmatd36" class=" dispnone">
+                                                    
+                                                    <ul class="ulsimples"> 
+                                                        <li class="linha categoriaprimeirobloco_3">
+                                                            <a class="alinha" target="centro" 
+                                                            href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                            Introdução                                              
+                                                            </a>
+                                                        </li> 
+                                                        
+                                    <!-- INÍCIO CATEGORIA - MATEMÁTICA DISCRETA - MODELO -->                    
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jmmatd37');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Vídeo Aulas</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jmmatd37" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/001 - MATEMÁTICA DISCRETA.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/002 - MATEMÁTICA DISCRETA.html" >                                                      
+                                                                    Vídeo Aula 2                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/003 - MATEMÁTICA DISCRETA.html" >                                                   
+                                                                    Vídeo Aula 3                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/004 - MATEMÁTICA DISCRETA.html" >                                                       
+                                                                    Vídeo Aula 4                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/005 - MATEMÁTICA DISCRETA.html" >                                                     
+                                                                    Vídeo Aula 5                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA - MATEMATICA DISCRETA - MODELO    -->                     
+                                    
+                                    <!-- INÍCIO CATEGORIA - MATEMATICA DISCRETA - MODELO -->  
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jmmatd38');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Conteúdo Online</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jmmatd38" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/001 - MATEMÁTICA DISCRETA.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/002 - MATEMÁTICA DISCRETA.html" >                                                      
+                                                                    Vídeo Aula 2                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/003 - MATEMÁTICA DISCRETA.html" >                                                   
+                                                                    Vídeo Aula 3                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/004 - MATEMÁTICA DISCRETA.html" >                                                       
+                                                                    Vídeo Aula 4                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/005 - MATEMÁTICA DISCRETA.html" >                                                     
+                                                                    Vídeo Aula 5                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA - MATEMATICA DISCRETA - MODELO    -->     
+                                    
+                                    
+                                    
+                                    <!-- INÍCIO CATEGORIA - MATEMATICA DISCRETA - MODELO -->  
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jmmatdl8');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Slides Power Point</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jmmatdl8" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1TBL9ccbNcJpk-YITGcC3SQVJEV6VfBSy2dIYI6G1n6A/edit?usp=sharing" >                                                       
+                                                                    Slide 1                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1czre-yPt-fyT9fJN5_sFmKIdsy2K9UHA7-iFW4y6XHM/edit?usp=sharing" >                                                      
+                                                                    Slide 2                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1OT1jWNJtBqSUpt2MunDWXs2Za16sxBv8ZaDbBnzmNbE/edit?usp=sharing" >                                                   
+                                                                    Slide 3                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1gIUyu2gDMOrpkhRMdSO77HM2Ar_PjiLXJ-1M_GWotO4/edit?usp=sharing" >                                                       
+                                                                    Slide 4                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1fYK_YqfvxzjEp0CZyPEy4yzxIPfS6fONE0ER6U7uz_I/edit?usp=sharing" >                                                     
+                                                                    Slide 5                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1AOoNmfxXH4BtNZfLJSM9MQHBLXMdNIGxMLurlXfB92U/edit?usp=sharing" >                                                     
+                                                                    Slide 6                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1WgbsGlfHXpNvzUsmrcCB27p7mSsGxvFSGub9Xac-DaI/edit?usp=sharing" >                                                     
+                                                                    Slide 7                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1fgiq6fYGxOJ82HwWH6W__LbP7pJ-9aXycG4jOavaIng/edit?usp=sharing" >                                                     
+                                                                    Slide 8                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1DVzaeuZ44d8D4g7-iDByL-XCdme7NC-tnk8XYt4M5J4/edit?usp=sharing" >                                                     
+                                                                    Slide 9                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1xVoSYzIw9u39j5r3YjNhp1_g_yucG2iQg6QEJbRtSxQ/edit?usp=sharing" >                                                     
+                                                                    Slide 10                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA - MATEMATICA DISCRETA - MODELO    -->  
+                                    
+                                    
+                                    
+                                    <!-- INÍCIO CATEGORIA - MATEMATICA DISCRETA - MODELO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jmmatd39l');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>JM</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jmmatd39l" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4"> 
+                                                                    <a class="alinha" target="centro" 
+                                                                        href="02 - SEMESTRE\MATEMÁTICA DISCRETA\EXERCÍCIOS E SIMULADOS\001 - MATEMÁTICA DISCRETA\00 - JMARY - CONJUNTO DE EXERCÍCIOS/00 - JMARY - CONJUNTO DE EXERCÍCIOS.html" >                                                       
+                                                                        Permutação                                               
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                        href="02 - SEMESTRE\MATEMÁTICA DISCRETA\EXERCÍCIOS E SIMULADOS\001 - MATEMÁTICA DISCRETA/GABARITO COMENTADO.html" >                                                       
+                                                                        Arranjo                                           
+                                                                    </a>
+                                                                </li> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                        href="02 - SEMESTRE\MATEMÁTICA DISCRETA\EXERCÍCIOS E SIMULADOS\001 - MATEMÁTICA DISCRETA/GABARITO COMENTADO.html" >                                                       
+                                                                        Combinação                                           
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA - MATEMATICA DISCRETA - MODELO    --> 
+                                    
+                                    
+                                    
+                                     
+                                    <!-- INÍCIO CATEGORIA - MATEMATICA DISCRETA - MODELO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jmmatd39');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Exercícios</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jmmatd39" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\EXERCÍCIOS E SIMULADOS\001 - MATEMÁTICA DISCRETA\00 - JMARY - CONJUNTO DE EXERCÍCIOS/00 - JMARY - CONJUNTO DE EXERCÍCIOS.html" >                                                       
+                                                                    Aula 1 - Exercícios                                               
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="http://jmtrueconteudo.blogspot.com.br/2016/11/iniciar-proximo-responder-opcao-opcao-b.html" >                                                       
+                                                                    Avaliação Parcial                                             
+                                                                    </a>
+                                                                </li>                                                                
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA - MATEMATICA DISCRETA - MODELO    -->                        
+                                     
+                                    <!-- INÍCIO CATEGORIA - MATEMATICA DISCRETA - MODELO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jmmatd40');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Livros</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jmmatd40" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA - MATEMATICA DISCRETA - MODELO    -->                     
+                                                        
+                                                    </ul> 
+                                                </li>
+            <!-- FIM MATERÍA MATEMATICA DISCRETA -                        --------------- -->  
+            
+            
+            
+            
+            <!-- INÍCIO MATERÍA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO   ------                 ---------- -->                                       
+                                                <li class="materiasegundobloco2 linha">                                            
+                                                    <table><tr>
+                                                    <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                        style="vertical-align: middle; height:27px; width:27px;"
+                                                        onclick=    "indiceclickmostrarocultar_tr('fjmmatd36');
+                                                            indiceclickalterarimagem      ( this, this.src);" 
+                                                            onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                            onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                    </td>
+                                                    <td>Fundamentos de Sistemas de Informação</td></tr></table>                                          
+                                                </li>
+                                                
+                                                <li id="fjmmatd36" class=" dispnone">
+                                                    
+                                                    <ul class="ulsimples"> 
+                                                        <li class="linha categoriaprimeirobloco_3">
+                                                            <a class="alinha" target="centro" 
+                                                            href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                            Introdução                                              
+                                                            </a>
+                                                        </li> 
+                                                        
+                                    <!-- INÍCIO CATEGORIA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO  -->                    
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjmmatd37');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Vídeo Aulas</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjmmatd37" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/001 - MATEMÁTICA DISCRETA.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/002 - MATEMÁTICA DISCRETA.html" >                                                      
+                                                                    Vídeo Aula 2                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/003 - MATEMÁTICA DISCRETA.html" >                                                   
+                                                                    Vídeo Aula 3                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/004 - MATEMÁTICA DISCRETA.html" >                                                       
+                                                                    Vídeo Aula 4                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\VIDEO AULAS/005 - MATEMÁTICA DISCRETA.html" >                                                     
+                                                                    Vídeo Aula 5                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO    -->                     
+                                    
+                                    <!-- INÍCIO CATEGORIA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO -->  
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjmmatd38');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Conteúdo Online</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjmmatd38" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/001 - MATEMÁTICA DISCRETA.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/002 - MATEMÁTICA DISCRETA.html" >                                                      
+                                                                    Vídeo Aula 2                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/003 - MATEMÁTICA DISCRETA.html" >                                                   
+                                                                    Vídeo Aula 3                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/004 - MATEMÁTICA DISCRETA.html" >                                                       
+                                                                    Vídeo Aula 4                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\CONTEÚDO ONLINE/005 - MATEMÁTICA DISCRETA.html" >                                                     
+                                                                    Vídeo Aula 5                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO   -->     
+                                    
+                                    
+                                    
+                                    <!-- INÍCIO CATEGORIA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO -->  
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="fimg1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjmmatdl8');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Slides Power Point</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjmmatdl8" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1TBL9ccbNcJpk-YITGcC3SQVJEV6VfBSy2dIYI6G1n6A/edit?usp=sharing" >                                                       
+                                                                    Slide 1                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1czre-yPt-fyT9fJN5_sFmKIdsy2K9UHA7-iFW4y6XHM/edit?usp=sharing" >                                                      
+                                                                    Slide 2                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1OT1jWNJtBqSUpt2MunDWXs2Za16sxBv8ZaDbBnzmNbE/edit?usp=sharing" >                                                   
+                                                                    Slide 3                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1gIUyu2gDMOrpkhRMdSO77HM2Ar_PjiLXJ-1M_GWotO4/edit?usp=sharing" >                                                       
+                                                                    Slide 4                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1fYK_YqfvxzjEp0CZyPEy4yzxIPfS6fONE0ER6U7uz_I/edit?usp=sharing" >                                                     
+                                                                    Slide 5                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1AOoNmfxXH4BtNZfLJSM9MQHBLXMdNIGxMLurlXfB92U/edit?usp=sharing" >                                                     
+                                                                    Slide 6                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1WgbsGlfHXpNvzUsmrcCB27p7mSsGxvFSGub9Xac-DaI/edit?usp=sharing" >                                                     
+                                                                    Slide 7                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1fgiq6fYGxOJ82HwWH6W__LbP7pJ-9aXycG4jOavaIng/edit?usp=sharing" >                                                     
+                                                                    Slide 8                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1DVzaeuZ44d8D4g7-iDByL-XCdme7NC-tnk8XYt4M5J4/edit?usp=sharing" >                                                     
+                                                                    Slide 9                                              
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="https://docs.google.com/presentation/d/1xVoSYzIw9u39j5r3YjNhp1_g_yucG2iQg6QEJbRtSxQ/edit?usp=sharing" >                                                     
+                                                                    Slide 10                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO    -->  
+                                    
+                                    
+                                    
+                                    <!-- INÍCIO CATEGORIA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="f2img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjmmatd39l');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>JM</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjmmatd39l" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4"> 
+                                                                    <a class="alinha" target="centro" 
+                                                                        href="02 - SEMESTRE\MATEMÁTICA DISCRETA\EXERCÍCIOS E SIMULADOS\001 - MATEMÁTICA DISCRETA\00 - JMARY - CONJUNTO DE EXERCÍCIOS/00 - JMARY - CONJUNTO DE EXERCÍCIOS.html" >                                                       
+                                                                        Permutação                                               
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                        href="02 - SEMESTRE\MATEMÁTICA DISCRETA\EXERCÍCIOS E SIMULADOS\001 - MATEMÁTICA DISCRETA/GABARITO COMENTADO.html" >                                                       
+                                                                        Arranjo                                           
+                                                                    </a>
+                                                                </li> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                        href="02 - SEMESTRE\MATEMÁTICA DISCRETA\EXERCÍCIOS E SIMULADOS\001 - MATEMÁTICA DISCRETA/GABARITO COMENTADO.html" >                                                       
+                                                                        Combinação                                           
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO    --> 
+                                    
+                                    
+                                    
+                                     
+                                    <!-- INÍCIO CATEGORIA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="f3img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjmmatd39');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Exercícios</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjmmatd39" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="02 - SEMESTRE\MATEMÁTICA DISCRETA\EXERCÍCIOS E SIMULADOS\001 - MATEMÁTICA DISCRETA\00 - JMARY - CONJUNTO DE EXERCÍCIOS/00 - JMARY - CONJUNTO DE EXERCÍCIOS.html" >                                                       
+                                                                    Aula 1 - Exercícios                                               
+                                                                    </a>
+                                                                </li>
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="http://jmtrueconteudo.blogspot.com.br/2016/11/iniciar-proximo-responder-opcao-opcao-b.html" >                                                       
+                                                                    Avaliação Parcial                                             
+                                                                    </a>
+                                                                </li>                                                                
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA - FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO    -->                        
+                                     
+                                    <!-- INÍCIO CATEGORIA - FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="f4img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjmmatd40');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Livros</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjmmatd40" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA - FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO   -->                     
+                                                        
+                                                    </ul> 
+                                                </li>
+            <!-- FIM MATERÍA FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO -                        --------------- -->  
+            
+            
+            
+            
+            <!-- INÍCIO MATERÍA 2 MODELO   ------                 ---------- -->                                       
+                                                <li class="materiasegundobloco2 linha">                                            
+                                                    <table><tr>
+                                                    <td><img id="f5img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                        style="vertical-align: middle; height:27px; width:27px;"
+                                                        onclick=    "indiceclickmostrarocultar_tr('fjm36');
+                                                            indiceclickalterarimagem      ( this, this.src);" 
+                                                            onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                            onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                    </td>
+                                                    <td>Matéria 2 Modelo</td></tr></table>                                          
+                                                </li>
+                                                
+                                                <li id="fjm36" class=" dispnone">
+                                                    
+                                                    <ul class="ulsimples"> 
+                                                        <li class="linha categoriaprimeirobloco_3">
+                                                            <a class="alinha" target="centro" 
+                                                            href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                            Introdução                                              
+                                                            </a>
+                                                        </li> 
+                                                        
+                                    <!-- INÍCIO CATEGORIA 1 MATÉRIA 2 MODELO -->                    
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="f6img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjm37');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Vídeo Aulas</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjm37" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 1 MATÉRIA 2 MODELO    -->                     
+                                    
+                                    <!-- INÍCIO CATEGORIA 2 MATÉRIA 2 MODELO -->  
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjm38');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Conteúdo Online</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjm38" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 2 MATÉRIA 2 MODELO    -->                      
+                                     
+                                    <!-- INÍCIO CATEGORIA 3 MATÉRIA 2 MODELO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="f6img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjm39');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Exercícios</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjm39" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 3 MATÉRIA 2 MODELO    -->                        
+                                     
+                                    <!-- INÍCIO CATEGORIA 4 MATÉRIA 2 MODELO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="f7img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('fjm40');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Livros</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="fjm40" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 4 MATÉRIA 2 MODELO    -->                     
+                                                        
+                                                    </ul> 
+                                                </li>
+            <!-- FIM MATERÍA 2 MODELO -                        --------------- -->  
+                                                                                                                                                                                                
+                                            </ul>     
+                                        </li> 
+<!-- FIM SEGUNDO SEMESTRE  --------------------------------------------------- -->   
+
+
+
+<!-- INÍCIO SEMESTRE MODELO --------- -------------------------------------- -->                                         
+                                        <li class="materiasegundobloco linha">                                            
+                                            <table><tr>
+                                                <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                    style="vertical-align: middle; height:27px; width:27px;"
+                                                    onclick=    "indiceclickmostrarocultar_tr('jm41');
+                                                        indiceclickalterarimagem      ( this, this.src);" 
+                                                        onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                        onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                </td>
+                                                <td>Semestre Modelo</td></tr></table>                                          
+                                        </li> 
+                                        
+                                        <li id="jm41" class="dispnone">
+                                            <ul class="ulsimples"> 
+                                                
+                                                <li class="categoriaprimeirobloco_2 linha">
+                                                    <a class="alinha" target="centro" 
+                                                        href="matematica/exercícios/tabuada/número 2/Número 2 Tabuada.html" >                                                       
+                                                        Introdução                                              
+                                                    </a>
+                                                </li>
+                                                
+            <!-- INÍCIO MATERÍA 1 MODELO-----                    ----------- -->                                       
+                                                <li class="materiasegundobloco2 linha">                                            
+                                                    <table><tr>
+                                                    <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                        style="vertical-align: middle; height:27px; width:27px;"
+                                                        onclick=    "indiceclickmostrarocultar_tr('jm42');
+                                                            indiceclickalterarimagem      ( this, this.src);" 
+                                                            onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                            onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                    </td>
+                                                    <td>Matéria 1 Modelo</td></tr></table>                                          
+                                                </li>
+                                                
+                                                <li id="jm42" class=" dispnone">
+                                                    
+                                                    <ul class="ulsimples"> 
+                                                        <li class="linha categoriaprimeirobloco_3">
+                                                            <a class="alinha" target="centro" 
+                                                            href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                            Introdução                                              
+                                                            </a>
+                                                        </li> 
+                                                        
+                                    <!-- INÍCIO CATEGORIA 1 MATÉRIA 1 MODELO---------- -->                            
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm43');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Vídeo Aulas</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm43" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 1 MATÉRIA 1 MODELO--   -------- -->                     
+                                          
+                                    <!-- INÍCIO CATEGORIA 2 MATÉRIA 1 MODELO---------- -->
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm44');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Conteúdo Online Modelo</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm44" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 2 MATÉRIA 1 MODELO--   -------- -->                     
+                                                        
+                                    <!-- INÍCIO CATEGORIA 3 MATÉRIA 1 MODELO---------- -->
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm45');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Exercícios Modelo</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm45" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 3 MATÉRIA 1 MODELO--   -------- -->                        
+                                                        
+                                    <!-- INÍCIO CATEGORIA 4 MATÉRIA 1 MODELO---------- -->
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm46');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Livros Modelo</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm46" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 4 MATÉRIA 1 MODELO--   -------- -->                           
+                                                        
+                                                    </ul> 
+                                                </li>
+            <!-- FIM MATERÍA 1 MODELO   -------                     -------- -->    
+            
+            <!-- INÍCIO MATERÍA 2 MODELO   ------                 ---------- -->                                       
+                                                <li class="materiasegundobloco2 linha">                                            
+                                                    <table><tr>
+                                                    <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                        style="vertical-align: middle; height:27px; width:27px;"
+                                                        onclick=    "indiceclickmostrarocultar_tr('jm47');
+                                                            indiceclickalterarimagem      ( this, this.src);" 
+                                                            onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                            onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                    </td>
+                                                    <td>Matéria 2 Modelo</td></tr></table>                                          
+                                                </li>
+                                                
+                                                <li id="jm47" class=" dispnone">
+                                                    
+                                                    <ul class="ulsimples"> 
+                                                        <li class="linha categoriaprimeirobloco_3">
+                                                            <a class="alinha" target="centro" 
+                                                            href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                            Introdução                                              
+                                                            </a>
+                                                        </li> 
+                                                        
+                                    <!-- INÍCIO CATEGORIA 1 MATÉRIA 2 MODELO -->                    
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm48');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Vídeo Aulas</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm48" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 1 MATÉRIA 2 MODELO    -->                     
+                                    
+                                    <!-- INÍCIO CATEGORIA 2 MATÉRIA 2 MODELO -->  
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm49');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Conteúdo Online</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm49" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 2 MATÉRIA 2 MODELO    -->                      
+                                     
+                                    <!-- INÍCIO CATEGORIA 3 MATÉRIA 2 MODELO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm50');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Exercícios</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm50" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 3 MATÉRIA 2 MODELO    -->                        
+                                     
+                                    <!-- INÍCIO CATEGORIA 4 MATÉRIA 2 MODELO --> 
+                                                        <li class="materiasegundobloco3 linha">                                            
+                                                            <table><tr>
+                                                            <td><img id="img1" class="img_maisbco" src="" title="Mostrar/Ocultar"                              
+                                                                style="vertical-align: middle; height:27px; width:27px;"
+                                                                onclick=    "indiceclickmostrarocultar_tr('jm51');
+                                                                    indiceclickalterarimagem      ( this, this.src);" 
+                                                                    onmouseover="indiceonmouseoveralterarimagem( this, this.src);" 
+                                                                    onmouseout= "indiceonmouseoveralterarimagem( this, this.src);"> 
+                                                            </td>
+                                                            <td>Livros</td></tr></table>                                          
+                                                        </li>
+                                                        
+                                                        <li id="jm51" class=" dispnone">
+                                                            <ul class="ulsimples"> 
+                                                                <li class="linha categoriaprimeirobloco_4">
+                                                                    <a class="alinha" target="centro" 
+                                                                    href="01 - SEMESTRE/ALGORÍTIMOS/VIDEO AULAS/001 - ALGORÍTIMOS.html" >                                                       
+                                                                    Vídeo Aula 1                                              
+                                                                    </a>
+                                                                </li>
+                                                            </ul>     
+                                                        </li>
+                                    <!-- FIM CATEGORIA 4 MATÉRIA 2 MODELO    -->                     
+                                                        
+                                                    </ul> 
+                                                </li>
+            <!-- FIM MATERÍA 2 MODELO -                        --------------- -->  
+                                                                                                                                                                                                
+                                            </ul>     
+                                        </li> 
+<!-- FIM SEMESTRE MODELO  --------------------------------------------------- --> 
+
+                                
+                            </ul>         
+                        </li>
+                    </ul>     
+                </li>    
+            </ul>  
+                    
+</li>    
+            </ul>    
+        </div>                     
+<!-- 
+-0
+-1
+-2
+<!-- 
+-0
+-1
+-2 ///////////////////////////////////menu//////////////////////////////////////////////////   
+-->   
+        
+    </li>  
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 1 FIM #### --> 
+<!-- 
+-0
+-1
+-2 ///////////////////////////////////menu//////////////////////////////////////////////////   
+-->     
+
+
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 1.1 AJUDA INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->
+    <li 
+        style="
+            height: 100%; float:    left;    position: relative; 
+            width:  93px; overflow: visible; "
+        
+        onMouseover="
+            this.style.backgroundColor='#23871C'; 
+            this.style.color='#3A3A3A';  
+            document.getElementById('coluna11tb').style.display = 'block'; "
+            
+        onMouseout="
+            this.style.backgroundColor='#3A3A3A';                               
+            document.getElementById('coluna11tb').style.display = 'none';  "
+    >
+        
+        <a 
+            target="centro" 
+            href="https://docs.google.com/spreadsheets/d/18fzBx7UrQYPY5R5515Ep5kNz1IfR21s9pvTSMFPHP8I/edit?usp=sharing" 
+            style="
+                color:           #fff; font-family:  Arial, Helvetica, sans-serif; 
+                font-size:       19px; padding-left: 10px; 
+                padding-right:   10px; line-height:  50px; 
+                text-decoration: none;"
+           
+            onMouseover=" this.style.color='black'; "
+            onMouseout="  this.style.color='#fff'; "       
+        > 
+            Home &#9662; </a>
+        
+        <table 
+            id         ="coluna11tb" width      ="150px" border ="0" 
+            cellpadding="0"          cellspacing="0"     bgcolor="#3A3A3A" 
+            style="display: none;">
+            
+            <tr> 
+                <td 
+                    align="center" width="150px" height="50px"      
+                    style="border-top: 1px solid #fff;"
+                    
+                    onMouseover="
+                        this.style.backgroundColor='#3498db'; 
+                        this.style.color='#3A3A3A';      
+                        this.style.cursor='pointer';"
+                    onMouseout ="
+                        this.style.backgroundColor='#3A3A3A';  
+                        this.style.color='#fff';         
+                        this.style.cursor='default';"
+                    
+                    onClick="
+                        document.getElementById('centro').src='https://docs.google.com/spreadsheets/d/1NOzVnv9D-W8g1kX8-qrNajVzSnYYK-QHGyMvxfhVw5c/edit?usp=sharing';    
+                        document.getElementById('coluna11tb').style.display = 'none';       "
+                    > 
+                    
+                    <a 
+                        target="centro" href="https://docs.google.com/spreadsheets/d/1NOzVnv9D-W8g1kX8-qrNajVzSnYYK-QHGyMvxfhVw5c/edit?usp=sharing"
+                        style="
+                            text-decoration: none; color: #fff; font-family: Arial, Helvetica, sans-serif; 
+                            font-size: 16px;"
+                       
+                        onclick=" 
+                            document.getElementById('coluna2tb').style.display = 'none'; "
+                    >
+                        Contatos</a> 
+ 
+                </td> 
+            </tr>  
+            
+            <tr> 
+                <td 
+                    align="center" width="150px" height="50px"      
+                    style="border-top: 1px solid #fff;"
+                    
+                    onMouseover="
+                        this.style.backgroundColor='#3498db'; 
+                        this.style.color='#3A3A3A';      
+                        this.style.cursor='pointer';"
+                    onMouseout ="
+                        this.style.backgroundColor='#3A3A3A';  
+                        this.style.color='#fff';         
+                        this.style.cursor='default';"
+                    
+                    onClick="
+                        document.getElementById('centro').src='https://https://docs.google.com/document/d/1CZSsVst_9qnY5On9X3mOxykxrvAuBm6A8bQJoN-O4vg/edit?usp=sharing';    
+                        document.getElementById('coluna11tb').style.display = 'none';       "
+                    > 
+                    
+                    <a 
+                        target="centro" href="https://docs.google.com/document/d/1CZSsVst_9qnY5On9X3mOxykxrvAuBm6A8bQJoN-O4vg/edit?usp=sharing"
+                        style="
+                            text-decoration: none; color: #fff; font-family: Arial, Helvetica, sans-serif; 
+                            font-size: 16px;"
+                       
+                        onclick=" 
+                            document.getElementById('coluna2tb').style.display = 'none'; "
+                    >
+                        Ajuda</a> 
+ 
+                </td> 
+            </tr>
+            
+        </table>                
+    </li>  
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 1.1 AJUDA FIM #### --> 
+<!-- 
+-0
+-1
+-2    
+--> 
+
+
+
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 4 INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->
+    <li 
+        style="height: 100%;  float:    left;    position: relative; 
+               width:  65px;  overflow: visible; "
+        
+        onMouseover="
+            this.style.backgroundColor='#23871C'; 
+            this.style.color='#3A3A3A';  
+            document.getElementById('coluna4tb').style.display = 'block'; "
+            
+        onMouseout="
+            this.style.backgroundColor='#3A3A3A';                               
+            document.getElementById('coluna4tb').style.display = 'none';  "
+    >
+        
+        <a 
+            href="#" 
+            style="color:         #fff; font-family:  Arial, Helvetica, sans-serif; 
+                   font-size:     19px; padding-left: 10px; 
+                   padding-right: 10px; line-height:  50px; 
+                   text-decoration: none;"
+           
+           onMouseover=" 
+               this.style.color='black'; "
+           onMouseout="  
+               this.style.color='#fff'; "       
+        >
+            ++ &#9662; </a>
+        
+        <table 
+            id         ="coluna4tb" width      ="210px" border ="0" 
+            cellpadding="0"         cellspacing="0"     bgcolor="#3A3A3A" 
+            style="display: none;">
+            <tr> 
+                <td 
+                    align="center" width="250px" height="50px" 
+                    style="border-top: 1px solid #fff;"
+                    
+                    onMouseover="
+                        this.style.backgroundColor='#3498db'; 
+                        this.style.color='#3A3A3A';  
+                        this.style.cursor='pointer';  "
+                    onMouseout="
+                        this.style.backgroundColor='#3A3A3A';  
+                        this.style.color='#fff';     
+                        this.style.cursor='default';  "
+                    
+                    onClick="
+                        document.getElementById('centro').src='https://docs.google.com/document/d/1-f10GCy6sTElTubN5lp6pOpJ_1-IMBG8RqBUgfqR2e4/edit?usp=sharing';    
+                        document.getElementById('coluna2tb')    .style.display = 'none';       "
+                > 
+                    <a 
+                        target="centro" href="https://docs.google.com/document/d/1-f10GCy6sTElTubN5lp6pOpJ_1-IMBG8RqBUgfqR2e4/edit?usp=sharing"
+                        style="
+                            text-decoration: none; color: #fff; font-family: Arial, Helvetica, sans-serif; 
+                            font-size: 14px;"
+                       
+                        onclick=" 
+                            document.getElementById('coluna4tb').style.display = 'none'; "
+                    >
+                        MB51 - VERIF. ENTRADA. CD/LOJA - VERIF. VENDA LOJA</a> 
+                </td> 
+            </tr>
+            
+            <tr> 
+                <td 
+                    align="center" width="250px" height="50px" 
+                    style="border-top: 1px solid #fff;"
+                    
+                    onMouseover="
+                        this.style.backgroundColor='#3498db'; 
+                        this.style.color='#3A3A3A';  
+                        this.style.cursor='pointer';  "
+                    onMouseout="
+                        this.style.backgroundColor='#3A3A3A';  
+                        this.style.color='#fff';     
+                        this.style.cursor='default';  "
+                    
+                    onClick="
+                        document.getElementById('centro').src='https://docs.google.com/document/d/16j0Hj5UKRKE6Fm0H_Z9knQs9AQgr_glUI9hyIHXnH6U/edit?usp=sharing';    
+                        document.getElementById('coluna4tb')    .style.display = 'none';       "
+                > 
+                    <a 
+                        target="centro" href="https://docs.google.com/document/d/16j0Hj5UKRKE6Fm0H_Z9knQs9AQgr_glUI9hyIHXnH6U/edit?usp=sharing"
+                        style="
+                            text-decoration: none; color: #fff; font-family: Arial, Helvetica, sans-serif; 
+                            font-size: 14px;"
+                       
+                        onclick=" 
+                            document.getElementById('coluna2tb').style.display = 'none'; "
+                    >
+                        MCG3 - CONSULTAR VENDA DE PRODUTOS</a> 
+                </td> 
+            </tr>                            
+            
+        </table>                
+    </li>  
+<!-- 
+-0
+-1
+-2
+- #### COLUNA 4 FIM #### --> 
+<!-- 
+-0
+-1
+-2    
+-->
+
+
+
+
+
+<!-- 
+-0
+-1
+-2
+- #### ÚLTIMA COLUNA INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->
+    <li style="float: right; height: 100%; ">
+        <div id="menuseta"> </div>   
+    </li>
+<!-- 
+-0
+-1
+-2
+- #### ÚLTIMA COLUNA FIM #### --> 
+<!-- 
+-0
+-1
+-2    
+-->            
+</ul>                                  
+</div> 
+<!--             
+-0
+-1
+-2
+- #### MENU FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-0
+-1
+-2
+- #### TOPO INÍCIO #### --> 
+<!-- 
+-0
+-1     <!-- class = custom-logo 
+-2    
+-->          
+<div id="topo_geral_prop_t" style="padding: 0px; margin: 0px; border-bottom: 1px solid;">
+<!-- ***************++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+<!-- ####  ####  -->
+<!-- ***************++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<tr><td>
+        
+    <div id="topo_geral_prop" class="topo_geral" style="border-bottom: 1px solid; ">
+        
+     <div class="topo" >
+         
+        <div class="custom-logo" > <img src="https://sites.google.com/site/jmarysystemsimagens/jmlogo.png" alt="" style="height: 100%"></div>
+       
+        <div class="custom-informacoes">
+            <table border="0" cellpadding="0" cellspacing="0"> 
+                <tr class="fone">
+                    <td colspan="3" align="center" valign="center" >
+                        <img align="center" src="https://sites.google.com/site/jmarysystemsimagens/fone.png" alt="">
+                        85 9139.2441
+                    </td>
+                </tr>
+                <tr class="">
+                    <td>
+                    <div style="padding-bottom: 0px; padding-left: 0px; padding-top: 0px; padding-right: 20px; margin: 0px;">
+                        <img style="cursor: pointer;" src="https://sites.google.com/site/jmarysystemsimagens/f.png" title="facebook">
+                        <img style="cursor: pointer;" src="https://sites.google.com/site/jmarysystemsimagens/t.png" title="twitter">
+                        <img style="cursor: pointer;" src="https://sites.google.com/site/jmarysystemsimagens/i.png" title="instagram">
+                    </div>
+                    </td>    
+                </tr> 
+            </table>
+            
+        </div>
+     </div>
+    </div>    
+    
+</td></tr>
+<!-- FIM tabelatopo++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->             
+</table>
+<!-- FIM tabelatopo++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->  
+</div>
+
+
+<!-- 
+-0
+-1
+-2
+- #### TOPO FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->  
+
+
+
+
+
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### ÍNDICE MATEMÁTICA INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+--> 
+
+<!-- 
+-0
+-1
+-2
+- #### ÍNDICE MATEMÁTICA FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+
+
+
+<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### ÍNDICE INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->  
+    <div id="listadomenu" class="dispnone" style=" background-color: #ffffff; 
+                     width: 100%; 
+                     padding: 0; 
+                     margin: 0;
+                     overflow: auto;" 
+    >
+        
+        <table id="tableleft" align="left" width="100%" border="0" cellpadding="5" cellspacing="0">
+   
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->            
+<!-- 
+-0
+-1
+-2
+- #### PORTUGUÊS INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+--> 
+            <tr> 
+                <td> <table><tr>
+                    <td><img class="img_list" src="" onclick="mostrarocultarporid('PORS0');" title="Mostrar/Ocultar" style="vertical-align: middle;"> </td>
+                    <td><span>Gbarbosa - Loja - GB 141</span> </td>                 
+                </tr></table></td>  
+            </tr>     
+            <!-- -->
+            <tr id="PORS0" class="dispnone">                
+            <!-- LEFT MARGI --><td style="padding-left: 35px; vertical-align: top; width: 100%; height: 27px"> 
+
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody>  
+                            
+                        <tr><td> 
+                            <a class="menul" target="centro"                                   
+                                                               
+                            href="https://docs.google.com/spreadsheets/d/14CcpAZ5S2Kh8D-wbx1te5JZBDHBphS5LnpaJRH053Wc/edit?usp=sharing" style="padding-left: 1px;">
+                            <fazul> Rotina Ressupridor </fazul>                                            
+                        </a></td></tr> 
+                        
+                        <tr><td> 
+                            <a class="menul" target="centro"                                   
+                                                               
+                            href="https://docs.google.com/spreadsheets/d/1COLKmxL7u1eGGr8wVF0muJOJzaFVSnWvuRdRlzV1cVM/edit?usp=sharing" style="padding-left: 1px;">
+                            <fazul> Rotina Ressupridor - Parecer Diário </fazul>                                            
+                        </a></td></tr> 
+                        
+                        <tr><td> 
+                            <a class="menul" target="centro"                                   
+                                                               
+                            href="https://docs.google.com/spreadsheets/d/18fzBx7UrQYPY5R5515Ep5kNz1IfR21s9pvTSMFPHP8I/edit?usp=sharing" style="padding-left: 1px;">
+                            <fazul> Agenda diária dos Fornecedores </fazul>                                            
+                        </a></td></tr> 
+<!-- 
+-0
+-1
+-2
+- #### PORTUGUÊS SUBITENS 1 INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->           
+
+            <!-- #### SUBITEM #### ------------------------------------------ --> 
+            <!-- 
+            -0
+            -1
+            -->
+            <tr> 
+                <td style="padding-top: 5px;"> <table><tr>
+                    <td><img class="img_list" src="" onclick="mostrarocultarporid('PORS1');" title="Mostrar/Ocultar" style="vertical-align: middle;"> </td>
+                    <td><span>Agenda Diária dos Fornecedores</span> </td>                 
+                </tr></table></td>  
+            </tr> 
+   
+            <!-- -->
+            <tr id="PORS1" class="dispnone">                
+                <td style="vertical-align: top; width: 100%; height: 27px"> 
+
+                    <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody>  
+                            
+                        <tr><!-- LEFT MARGI --><td style="padding-left: 33px;">
+                                
+                            <a class="menul" target="centro" 
+                                href="https://docs.google.com/spreadsheets/d/1OCRHgjau09QdmwrLh0brssgwOAyJ3fFKIKaNm2eJBWI/edit?usp=sharing" style="padding-left: 1px;">
+                                    <fazul>Gestor ZRIS</fazul>                                            
+                        </a></td></tr>
+                        
+                        <tr><!-- LEFT MARGI --><td style="padding-left: 33px;">
+                                
+                            <a class="menul" target="centro" 
+                                href="https://docs.google.com/spreadsheets/d/1gd4Zrk33NckOOeTCP3i7TvISyDt3kNnztW5FMvcyCLw/edit?usp=sharing" style="padding-left: 1px;">
+                                    <fazul>Gestor MB52</fazul>                                            
+                        </a></td></tr>
+                        
+                        
+                        <!-- #### SUBITEM DO SUBITEM INÍCIO #### ----------- --> 
+                        <!-- 
+                        -0   MATEMÁTICA - ARITMÉTICA - SUBTRAÇÃO         
+                        -1
+                        --> 
+                        <tr><!-- LEFT MARGI --><td style="padding-left: 33px;">
+                                
+                            <!-- #### SUBITEM DO SUBITEM INÍCIO #### ------- --> 
+                            <!-- 
+                            -0   
+                            -1
+                            -->    
+                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody>
+                                    
+                                    <!-- #### SUBITEM #### ------------------------------------------ --> 
+                                    <!-- 
+                                    -0
+                                    -1
+                                    -->
+                                    <tr> 
+                                        <td style="padding-top: 5px;"> <table><tr>
+                                        <td><img class="img_list" src="" onclick="mostrarocultarporid('xx2');" title="Mostrar/Ocultar" style="vertical-align: middle;"> </td>
+                                        <td><span>AMBEV</span> </td>                 
+                                        </tr></table></td>  
+                                    </tr>  
+                                    
+                                    <!-- --> 
+                                    <tr id="xx2" class="dispnone"> 
+                                        <td style="vertical-align: top; width: 100%; height: 27px"> 
+                                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody> 
+                                                
+                                                <tr><!-- LEFT MARGI --><td style="padding-left: 33px;">
+                                                    
+                                                    <a class="menul" target="centro" 
+                                                        href="https://docs.google.com/spreadsheets/d/1LnzkmPu4syTfo5zmmRY0UrFA2KT_BjAx97vBMVK9qSs/edit?usp=sharing" style="padding-left: 1px;">
+                                                        <fazul>Produtos</fazul>                                            
+                                                </a></td></tr>
+                                                
+                                                <tr><!-- LEFT MARGI --><td style="padding-left: 33px;">
+                                                    
+                                                    <a class="menul" target="centro" 
+                                                        href="https://docs.google.com/spreadsheets/d/1LnzkmPu4syTfo5zmmRY0UrFA2KT_BjAx97vBMVK9qSs/edit?usp=sharing" style="padding-left: 1px;">
+                                                        <fazul>Gestor</fazul>                                            
+                                                </a></td></tr>
+                                                
+                                            </tbody></table>
+                                        </td> 
+                                    </tr>    
+                                    
+                            </tbody></table>  
+                            <!--  
+                            <!-- 
+                            -0         
+                            -1
+                            ---- #### SUBITEM DO SUBITEM FIM #### -------------> 
+                                
+                        </td></tr>
+                        <!-- 
+                        -0
+                        -1        MATEMÁTICA - ARITMÉTICA - SUBTRAÇÃO
+                        --> 
+                        <!-- #### SUBITEM DO SUBITEM FIM #### -------------- -->
+                        
+                        
+                        
+                        
+                        <!-- #### SUBITEM DO SUBITEM INÍCIO #### ----------- --> 
+                        <!-- 
+                        -0   MATEMÁTICA - ARITMÉTICA - MULTIPLICAÇÃO          
+                        -1
+                        --> 
+                        <tr><!-- LEFT MARGI --><td style="padding-left: 33px;">
+                                
+                            <!-- #### SUBITEM DO SUBITEM INÍCIO #### ------- --> 
+                            <!-- 
+                            -0   
+                            -1
+                            -->    
+                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody>
+                                    
+                                    <!-- #### SUBITEM #### ------------------------------------------ --> 
+                                    <!-- 
+                                    -0
+                                    -1
+                                    -->
+                                    <tr> 
+                                        <td style="padding-top: 5px;"> <table><tr>
+                                        <td><img class="img_list" src="" onclick="mostrarocultarporid('xx1');" title="Mostrar/Ocultar" style="vertical-align: middle;"> </td>
+                                        <td><span>COCA-COLA</span> </td>                 
+                                        </tr></table></td>  
+                                    </tr>  
+                                    
+                                    <!-- --> 
+                                    <tr id="xx1" class="dispnone"> 
+                                        <td style="vertical-align: top; width: 100%; height: 27px"> 
+                                            <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0"> <tbody> 
+                                                
+                                                <tr><!-- LEFT MARGI --><td style="padding-left: 33px;">
+                                                    
+                                                    <a class="menul" target="centro" 
+                                                        href="https://docs.google.com/spreadsheets/d/1_59chMQO21IPBirrDWMjk4Esh4cheYP7AD1U7vmtmQk/edit?usp=sharing" style="padding-left: 1px;">
+                                                        <fazul>Produtos</fazul>                                            
+                                                </a></td></tr>
+                                                
+                                                <tr><!-- LEFT MARGI --><td style="padding-left: 33px;">
+                                                    
+                                                    <a class="menul" target="centro" 
+                                                        href="https://docs.google.com/spreadsheets/d/1_59chMQO21IPBirrDWMjk4Esh4cheYP7AD1U7vmtmQk/edit?usp=sharing" style="padding-left: 1px;">
+                                                        <fazul>Gestor</fazul>                                            
+                                                </a></td></tr>
+                                                
+                                            </tbody></table>
+                                        </td> 
+                                    </tr>    
+                            </tbody></table>  
+                            <!--  
+                            <!-- 
+                            -0         
+                            -1
+                            ---- #### SUBITEM DO SUBITEM FIM #### -------------> 
+                                
+                        </td></tr>
+                        <!-- 
+                        -0
+                        -1        MATEMÁTICA - ARITMÉTICA - MULTIPLICAÇÃO
+                        --> 
+                        <!-- #### SUBITEM DO SUBITEM FIM #### -------------- --> 
+                                                                                    
+                    </tbody></table>        
+                </td>                  
+            </tr> 
+            <!-- #### SUBITEM #### ------------------------------------------ --> 
+            <!-- 
+            -0
+            -1
+            -->
+
+                                                
+                        
+<!-- 
+-0
+-1
+-2
+- #### PORTUGUÊS SUBITENS 1 FIM #### --> 
+<!-- 
+-0
+-1
+-2    
+--> 
+                                                                                    
+                    </tbody></table>        
+                </td>                  
+            </tr> 
+            <!-- #### FINALIZANDO PORTUGUÊS #### ------------------------------------------ --> 
+            <!-- 
+            -0
+            -1
+            -->
+<!-- 
+-0
+-1
+-2
+- #### PORTUGUÊS FIM #### --> 
+<!-- 
+-0
+-1
+-2    
+-->         
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->  
+
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        </table>                     
+    </div>
+<!-- 
+-0
+-1
+-2
+- #### ÍNDICE FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->  
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-0
+-1
+-2
+- #### IFRAME CENTRO INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->     
+    <iframe id="centro" name="centro" scrolling="auto" width="100%" frameborder="0" allowfullscreen
+        src="http://jmtrue.blogspot.com.br/2016/10/iniciar-proximo-responder-opcao-opcao-b.html" >            
+    </iframe>     
+    
+<script type="text/javascript">
+function resizeIframe() {
+    var height = document.documentElement.clientHeight;
+    
+    document.getElementById('centro').style.height = height +"px"; //  - height +"px" - para ficar do tamanho da página
+};
+document.getElementById('centro').onload = resizeIframe;
+window.onresize = resizeIframe;
+</script>
+<!-- 
+-0
+-1
+-2
+- #### IFRAME CENTRO FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+
+
+
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!--
+-0
+-1
+-2
+- #### SCRIPT'S �NDICE IN�CIO ####  
+-0
+-1
+-2    
+-->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++menuseta2  + mouseover mouseout -  -->
+ <script type="text/javascript">   
+ jQuery(document).ready(function(){    
+    
+    $(".li_imagem_menu, .alinha").on("click",function(e){
+        
+        if ( $("#menuxx").hasClass("dispnone") === true ){
+            
+            $("#menuxx").removeClass("dispnone");
+            $("#menuxx").addClass("mostrar");
+        }
+        else if ( $("#menuxx").hasClass("mostrar") === true ){
+            
+            $("#menuxx").removeClass("mostrar");
+            $("#menuxx").addClass("dispnone");
+        }
+    });   
+
+});
+ </script> 
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!--
+-0
+-1
+-2
+- #### SCRIPT'S �NDICE FIM ####  
+-0
+-1
+-2    
+-->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!--
+-0
+-1
+-2
+- #### SCRIPT'S �NDICE IN�CIO ####  
+-0
+-1
+-2    
+-->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+ <script type="text/javascript">       
+    function indiceclickmostrarocultar_tr( id ){
+        
+        if ( $('#'+id).hasClass("dispnone") === true ){
+            
+            $('#'+id).removeClass("dispnone");
+            $( '#'+id ).css('display','block'); 
+        }
+        else{
+            
+            $('#'+id).addClass("dispnone");
+            $( '#'+id ).css('display','none'); 
+        }                           
+    } 
+    function indiceonmouseoveralterarimagem( obg, src){ var src2 = ($(obg).attr('src') );
+              //SE FOR NO BLOG UTILIZE SRC
+        switch( src2 ) {
+             //SINAL DE + BRANCO
+        case "img/maisbco.png": 
+            //SINAL DE + PRETO
+            obg.src="img/maispto.png"; 
+            break;
+             //SINAL DE + PRETO
+        case "img/maispto.png": 
+                    //SINAL DE + BRANCO
+            obg.src="img/maisbco.png"; 
+            break;
+             //SINAL DE - PRETO
+        case "img/menospto.png": 
+                    //SINAL DE - BRANCO
+            obg.src="img/menosbco.png"; 
+            break;  
+             //SINAL DE - BRANCO
+        case "img/menosbco.png": 
+                    //SINAL DE - PRETO
+            obg.src="img/menospto.png"; 
+            break;      
+        }
+    }                                             
+    function indiceclickalterarimagem( obg, src){ var src2 = ($(obg).attr('src') );   
+               //SE FOR NO BLOG UTILIZE SRC
+        switch( src2 ) {
+        
+             //SINAL DE + PRETO
+        case "img/maispto.png":
+                    //SINAL DE - PRETO
+            obg.src="img/menospto.png"; 
+            break;
+             //SINAL DE - PRETO
+        case "img/menospto.png": 
+                    //SINAL DE + PRETO
+            obg.src="img/maispto.png"; 
+            break;
+        }
+    }
+ </script> 
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!--
+-0
+-1
+-2
+- #### SCRIPT'S �NDICE FIM ####  
+-0
+-1
+-2    
+-->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### SCRIPT INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+--> 
+<script type="text/javascript">     
+    function mostrarocultarporid( id ){
+        
+        if ( $('#'+id).hasClass("dispnone") === true ){
+            
+            $('#'+id).removeClass("dispnone");
+            $( '#'+id ).css('display','block'); 
+        }
+        else{
+            
+            $('#'+id).addClass("dispnone");
+            $( '#'+id ).css('display','none'); 
+        }                           
+    }
+ </script>      
+<!-- 
+-0
+-1
+-2
+- #### JQUERY INÍCIO #### --> 
+<!-- 
+-0
+-1
+-2    
+-->  
+ <script type="text/javascript">
+jQuery(document).ready(function(){
+    
+    $(".li_imagem_menu, .alinha").on("click",function(e){
+        
+        mostrarOcultarProp('dispnone');
+    });   
+
+    $(".topo2 .icemegamenu .icemegamenu > ul > li").on("click",function(e){
+        $(".topo2 .icemegamenu .icemegamenu > ul > li").removeClass('active');
+        $(e.currentTarget).addClass('active');
+    });
+    
+    $("#menuimg").on("click",function(e){
+        
+        mostrarOcultarProp('dispnone');
+    });
+    
+    $(".menul").on("click",function(e){
+        
+        mostrarOcultarProp('dispnone');
+    });
+    
+    function mostrarOcultarProp(classe){
+        
+        $("#listadomenu").toggleClass(classe);
+        $("#menuxx").toggleClass(classe);
+        
+        
+        $("#topo_geral_prop").toggleClass(classe);
+    }
+    
+    $('#centro').load(function(){
+               
+    });
+    
+    $('a').click(function(){
+        $('html, body').animate({scrollTop: 0},'slow');
+    });
+    
+    $('.img_list').attr('src','https://lh6.googleusercontent.com/kVInumJ9ZHKfkUIPf_FchiHlx3LCWqdjZDysXdjOpKc=s207-p-no');
+    $('.img_maisbco').attr('src','https://lh6.googleusercontent.com/-dQh94gLAuBp5txaFOBnzGF3AWpJc783cdKd0Pu5k8M=s207-p-no');
+    $('.img_maisbco').hover(
+            function(e) { mostrarOcultaropcao( this, this.src); 
+         }, function(e) { mostrarOcultaropcao( this, this.src); 
+    });
+    $('.img_list').hover(
+            function(e) { mostrarOcultaropcao( this, this.src); 
+         }, function(e) { mostrarOcultaropcao( this, this.src); 
+    });
+    $(".img_list").on("click",function(e){
+        imgclickopcao( this, this.src); 
+    });
+    $(".img_maisbco").on("click",function(e){
+        imgclickopcao( this, this.src); 
+    });
+    function mostrarOcultaropcao( obg, src){
+        switch( src ) {
+        
+        case "https://lh6.googleusercontent.com/-dQh94gLAuBp5txaFOBnzGF3AWpJc783cdKd0Pu5k8M=s207-p-no": 
+            obg.src="https://lh3.googleusercontent.com/ontFcFJjvZVC7mQMdF84BEi1DkCubmknTWXUHapnKa0=s207-p-no"; 
+            break;
+        case "https://lh3.googleusercontent.com/ontFcFJjvZVC7mQMdF84BEi1DkCubmknTWXUHapnKa0=s207-p-no": 
+            obg.src="https://lh6.googleusercontent.com/-dQh94gLAuBp5txaFOBnzGF3AWpJc783cdKd0Pu5k8M=s207-p-no"; 
+            break;
+        case "https://lh4.googleusercontent.com/6mP8vSsBlnKjD_Qm8QrVL7vcKswOIXlqWw7DxRbHbmM=s207-p-no": 
+            obg.src="https://lh6.googleusercontent.com/kVInumJ9ZHKfkUIPf_FchiHlx3LCWqdjZDysXdjOpKc=s207-p-no"; 
+            break;  
+        case "https://lh6.googleusercontent.com/kVInumJ9ZHKfkUIPf_FchiHlx3LCWqdjZDysXdjOpKc=s207-p-no": 
+            obg.src="https://lh4.googleusercontent.com/6mP8vSsBlnKjD_Qm8QrVL7vcKswOIXlqWw7DxRbHbmM=s207-p-no"; 
+            break;      
+        }
+    }
+    function imgclickopcao( obg, src){                            
+        switch( src ) {
+        
+        case "https://lh3.googleusercontent.com/ontFcFJjvZVC7mQMdF84BEi1DkCubmknTWXUHapnKa0=s207-p-no": 
+            obg.src="https://lh4.googleusercontent.com/6mP8vSsBlnKjD_Qm8QrVL7vcKswOIXlqWw7DxRbHbmM=s207-p-no"; 
+            break;
+        case "https://lh4.googleusercontent.com/6mP8vSsBlnKjD_Qm8QrVL7vcKswOIXlqWw7DxRbHbmM=s207-p-no": 
+            obg.src="https://lh3.googleusercontent.com/ontFcFJjvZVC7mQMdF84BEi1DkCubmknTWXUHapnKa0=s207-p-no"; 
+            break;
+        }
+    }
+    
+
+});
+    
+jQuery(window).resize(function() {
+
+    var browser_width2 = jQuery(window).width();
+
+});
+</script>
+<!-- 
+-0
+-1
+-2
+- #### JQUERY FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   
+-->
+        
+    </body>
+</html>
